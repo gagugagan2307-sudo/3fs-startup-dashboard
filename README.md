@@ -1,30 +1,15 @@
-# 3FS Creative Studio — Final Editable Dashboard
+# 3FS Creative Studio — V12 Team Structure
 
-Upload `index.html`, `portal.html` and `3fs-logo.jpg` to the root of the existing GitHub Pages repository.
+## Teams
+Exactly two teams are used:
+- Team 1 — DHANUSH, AMULYA, ADITYA, RANJITHA
+- Team 2 — GAGAN, TEJAS, KOUSHIK
 
-Features:
-- Working dashboard and portal
-- Custom add/edit/delete for clients, projects, teams, services, enquiries and partners
-- Team 1–7 plus sub-member management
-- Project completed/not completed status
-- Income, revenue, investment and profit/loss fields
-- Partner share and investment fields
-- Project history
-- Notifications/data sections
-- Working theme selector with persistent themes
-- Your 3FS logo
-- Browser localStorage data persistence
+Both teams have identical controls: add member, edit, remove, customise, add/edit/remove sub-members, and services/work performed. Members can have custom fields.
 
-The site can run on GitHub Pages or any static host. With Supabase configured, shared data is stored in the live database and synchronized in real time; localStorage is used as a fallback/cache.
+The existing Reports section is preserved. Team-wise reports and 3-day snapshots map project assignments to the correct team by team name or member name.
 
+Supabase live database/auth files are included. Anonymous Sign-Ins remain supported.
 
-## Multi-user authentication and access
-This version uses Supabase Auth with email/password accounts. Every active 3FS team member is automatically an **Admin Team Member** with full access to the dashboard, data, user management, and real-time features. There are no Owner, CEO, Manager, Viewer, or restricted-member levels.
-
-New accounts are created as `admin` automatically by the database trigger. You do not need to promote users manually. Database RLS enforces the same full-access team policy server-side.
-
-Do not place a Supabase service-role/secret key in the website.
-
-
-## No-Login Mode
-Login authentication has been removed. The dashboard opens directly and existing admin permission checks remain enabled for all users. Supabase live sync uses the publishable key without requiring a signed-in session; configure Supabase RLS policies to allow the required anonymous access if live sync is desired.
+### GitHub
+Upload all files in this package directly to the repository root. Replace the files with the same names. You do not need to delete unrelated old files; this package is self-contained and the root `index.html` is the active website.
